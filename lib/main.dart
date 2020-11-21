@@ -1,4 +1,4 @@
-import 'curs1/currency_converter.dart' as app;
+import 'curs1/currency_converter_api.dart' as app;
 
 void main() {
   app.main();
