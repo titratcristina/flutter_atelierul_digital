@@ -4,35 +4,35 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-Future<Album> fetchAlbum() async {
+Future<ExchangeRates> fetchExchangeRates() async {
   final http.Response response =
   await http.get('https://api.exchangeratesapi.io/latest?symbols=RON');
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
     // then parse the JSON.
-    return Album.fromJson(jsonDecode(response.body));
+    return ExchangeRates.fromJson(jsonDecode(response.body));
   } else {
     // If the server did not return a 200 OK response,
     // then throw an exception.
-    throw Exception('Failed to load album');
+    throw Exception('Failed to load ExchangeRates');
   }
 }
 
-class Album {
-  final double rates;
-  final String base;
-  final String date;
+class ExchangeRates {
+  ExchangeRates({this.rates, this.base, this.date});
 
-  Album({this.rates, this.base, this.date});
-
-  factory Album.fromJson(Map<String, dynamic> json) {
-    return Album(
+  factory ExchangeRates.fromJson(Map<String, dynamic> json) {
+    return ExchangeRates(
       rates: json['rates']['RON'],
       base: json['base'],
       date: json['date'],
     );
   }
+
+  final double rates;
+  final String base;
+  final String date;
 }
 
 void main() => runApp(const MyApp());
@@ -45,12 +45,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Future<Album> futureAlbum;
+  Future<ExchangeRates> futureExchangeRates;
 
   @override
   void initState() {
     super.initState();
-    futureAlbum = fetchAlbum();
+    futureExchangeRates = fetchExchangeRates();
   }
 
   @override
@@ -65,9 +65,9 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Fetch Data Example'),
         ),
         body: Center(
-          child: FutureBuilder<Album>(
-            future: futureAlbum,
-            builder: (BuildContext context, AsyncSnapshot<Album> snapshot) {
+          child: FutureBuilder<ExchangeRates>(
+            future: futureExchangeRates,
+            builder: (BuildContext context, AsyncSnapshot<ExchangeRates> snapshot) {
               if (snapshot.hasData) {
                 return Text(snapshot.data.rates.toString());
               } else if (snapshot.hasError) {
