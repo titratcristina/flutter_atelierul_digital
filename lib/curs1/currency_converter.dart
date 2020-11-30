@@ -53,16 +53,18 @@ class _HomePageState extends State<HomePage> {
                   RegExp(
                     r'^\d*\.?\d*$',
                   ),
-                )
+                ),
               ],
               decoration: InputDecoration(
                 errorText: error,
                 hintText: 'Enter the amount in EUR.',
               ),
               onChanged: (String value) {
-                setState(() {
-                  text = value;
-                });
+                setState(
+                  () {
+                    text = value;
+                  },
+                );
               },
             ),
           ),
@@ -70,30 +72,33 @@ class _HomePageState extends State<HomePage> {
             child: const Text('Convert'),
             onPressed: () {
               if (text == '' || text == null) {
-                setState(() {
-                  error = 'Please enter a number!';
-                  number = null;
-                });
+                setState(
+                  () {
+                    error = 'Please enter a number!';
+                    number = null;
+                  },
+                );
               } else {
-                setState(() {
-                  error = null;
-                  number = double.parse(text) * 4.87;
-                  print('identifier');
-                });
+                setState(
+                  () {
+                    error = null;
+                    number = double.parse(text) * 4.87;
+                    print('identifier');
+                  },
+                );
               }
             },
           ),
-          if (number != null)
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-              child: Text(
-                number.toStringAsFixed(2) + ' RON',
-                style: const TextStyle(
-                  fontSize: 30,
-                  color: Colors.black54,
-                ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
+            child: Text(
+              number.toStringAsFixed(2) + ' RON',
+              style: const TextStyle(
+                fontSize: 30,
+                color: Colors.black54,
               ),
-            )
+            ),
+          ),
         ],
       ),
     );
