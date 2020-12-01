@@ -87,11 +87,12 @@ class _HomePageState extends State<HomePage> {
             },
           );
           showDialog<void>(
-              context: context,
-              builder: (_) => AlertDialog(
-                    title: Text('$number'),
-                    content: Text('$text'),
-                  ));
+            context: context,
+            builder: (_) => AlertDialog(
+              title: Text('$number'),
+              content: Text('$text'),
+            ),
+          );
         },
         child: const Icon(Icons.check),
       ),
