@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
               decoration: InputDecoration(
                 hintText: 'password',
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.visibility_rounded),
+                  icon: const Icon(Icons.visibility_rounded),
                   onPressed: () {
                     setState(
                       () {
