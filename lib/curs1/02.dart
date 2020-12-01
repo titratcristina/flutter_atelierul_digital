@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: <Widget>[
           TextField(
-            onChanged: (String value){
+            onChanged: (String value) {
               setState(() {
                 text = value;
               });

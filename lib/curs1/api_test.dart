@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Future<ExchangeRates> fetchExchangeRates() async {
-  final http.Response response =
-  await http.get('https://api.exchangeratesapi.io/latest?symbols=RON');
+  final http.Response response = await http.get('https://api.exchangeratesapi.io/latest?symbols=RON');
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,

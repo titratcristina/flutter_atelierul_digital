@@ -8,8 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 Future<ExchangeRates> fetchExchangeRates() async {
-  final http.Response response =
-      await http.get('https://api.ExchangeRatesapi.io/latest?symbols=RON');
+  final http.Response response = await http.get('https://api.ExchangeRatesapi.io/latest?symbols=RON');
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
@@ -114,8 +113,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20.0),
             child: FutureBuilder<ExchangeRates>(
               future: futureExchangeRates,
-              builder:
-                  (BuildContext context, AsyncSnapshot<ExchangeRates> snapshot) {
+              builder: (BuildContext context, AsyncSnapshot<ExchangeRates> snapshot) {
                 if (snapshot.hasData) {
                   eur = snapshot.data.rates;
                   return Text('1 EUR is $eur RON');
