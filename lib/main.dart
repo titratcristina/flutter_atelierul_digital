@@ -1,4 +1,4 @@
-import 'curs2/guess_my_number.dart' as app;
+import 'test_homework.dart' as app;
 
 void main() {
   app.main();
