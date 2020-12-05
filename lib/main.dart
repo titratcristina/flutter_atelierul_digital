@@ -1,4 +1,4 @@
-import 'test_homework.dart' as app;
+import 'curs3/basic_phrases.dart' as app;
 
 void main() {
   app.main();
