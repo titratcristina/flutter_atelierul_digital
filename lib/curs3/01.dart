@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(),
 
-      // Stack(
+      // body: Stack(
       //   alignment: AlignmentDirectional.center,
       //   children: <Widget>[
       //     Container(
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
       //   ],
       // ),
 
-      // GridView.builder(
+      // body: GridView.builder(
       //   itemCount: 100,
       //   padding: const EdgeInsets.all(16.0),
       //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -94,7 +94,13 @@ class _HomePageState extends State<HomePage> {
       //   },
       // ),
 
-      // ListView.builder(),
+      // body: ListView.builder(
+      //   itemCount: 100,
+      //   padding: const EdgeInsets.all(16.0),
+      //   itemBuilder: (BuildContext context, int index) {
+      //     return Text('$index');
+      //   },
+      // ),
     );
   }
 }
