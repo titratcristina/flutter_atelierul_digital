@@ -32,18 +32,22 @@ class _HomePageState extends State<HomePage> {
             groupValue: hasSugar,
             value: true,
             onChanged: (bool value) {
-              setState(() {
-                hasSugar = value;
-              });
+              setState(
+                () {
+                  hasSugar = value;
+                },
+              );
             },
           ),
           Radio<bool>(
             groupValue: hasSugar,
             value: false,
             onChanged: (bool value) {
-              setState(() {
-                hasSugar = value;
-              });
+              setState(
+                () {
+                  hasSugar = value;
+                },
+              );
             },
           ),
         ],

@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                   RegExp(
                     r'^\d*\.?\d*$',
                   ),
-                )
+                ),
               ],
               decoration: InputDecoration(
                 errorText: error,
@@ -135,11 +135,13 @@ class _HomePageState extends State<HomePage> {
                   number = null;
                 });
               } else {
-                setState(() {
-                  error = null;
-                  number = double.parse(text) * eur;
-                  print('identifier');
-                });
+                setState(
+                  () {
+                    error = null;
+                    number = double.parse(text) * eur;
+                    print('identifier');
+                  },
+                );
               }
             },
           ),
@@ -153,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.black54,
                 ),
               ),
-            )
+            ),
         ],
       ),
     );

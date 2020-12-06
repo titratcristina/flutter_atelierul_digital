@@ -50,9 +50,9 @@ class _HomePageState extends State<HomePage> {
                     textAlign: TextAlign.center,
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
       body: Container(),

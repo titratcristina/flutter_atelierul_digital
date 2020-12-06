@@ -26,8 +26,26 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   AudioCache _audioCache;
-  final List<String> _audioNames = <String>['Salut!', 'Hallo!','Cine ești?', 'Wer bist du?', 'Eu sunt ...', 'Ich bin ...', 'Sunt bine.', 'Es geht mir gut.'];
-  final List<String> _audioFiles = <String>['salut.mp3', 'hallo.mp3','cineesti.mp3', 'werbistdu.mp3', 'eusunt.mp3', 'ichbin.mp3', 'suntbine.mp3', 'esgehtmirgut.mp3'];
+  final List<String> _audioNames = <String>[
+    'Salut!',
+    'Hallo!',
+    'Cine ești?',
+    'Wer bist du?',
+    'Eu sunt ...',
+    'Ich bin ...',
+    'Sunt bine.',
+    'Es geht mir gut.'
+  ];
+  final List<String> _audioFiles = <String>[
+    'salut.mp3',
+    'hallo.mp3',
+    'cineesti.mp3',
+    'werbistdu.mp3',
+    'eusunt.mp3',
+    'ichbin.mp3',
+    'suntbine.mp3',
+    'esgehtmirgut.mp3'
+  ];
 
   @override
   void initState() {
@@ -43,7 +61,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Basic Phrases'),
       ),
-
       body: GridView.builder(
         itemCount: 8,
         padding: const EdgeInsets.all(16.0),
@@ -78,8 +95,6 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-
-      // ListView.builder(),
     );
   }
 }

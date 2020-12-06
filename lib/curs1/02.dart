@@ -34,9 +34,11 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           TextField(
             onChanged: (String value) {
-              setState(() {
-                text = value;
-              });
+              setState(
+                () {
+                  text = value;
+                },
+              );
               print(text);
             },
           ),

@@ -32,57 +32,58 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: <Widget>[
-            TextField(
-              keyboardType: TextInputType.text,
-              obscureText: hidePassword,
-              // for password
-              inputFormatters: <TextInputFormatter>[
-                FilteringTextInputFormatter.digitsOnly,
-              ],
-              decoration: InputDecoration(
-                hintText: 'password',
-                suffixIcon: IconButton(
-                  icon: const Icon(Icons.visibility_rounded),
-                  onPressed: () {
-                    setState(
-                      () {
-                        if (hidePassword) {
-                          hidePassword = false;
-                        } else {
-                          hidePassword = true;
-                        }
-                      },
-                    );
-                  },
-                ),
-                errorText: error,
+      appBar: AppBar(),
+      body: Column(
+        children: <Widget>[
+          TextField(
+            keyboardType: TextInputType.text,
+            obscureText: hidePassword,
+            // for password
+            inputFormatters: <TextInputFormatter>[
+              FilteringTextInputFormatter.digitsOnly,
+            ],
+            decoration: InputDecoration(
+              hintText: 'password',
+              suffixIcon: IconButton(
+                icon: const Icon(Icons.visibility_rounded),
+                onPressed: () {
+                  setState(
+                    () {
+                      if (hidePassword) {
+                        hidePassword = false;
+                      } else {
+                        hidePassword = true;
+                      }
+                    },
+                  );
+                },
               ),
-              onChanged: (String value) {
-                text = value;
-              },
+              errorText: error,
             ),
-            RaisedButton(
-              child: const Text('Login'),
-              onPressed: () {
-                if (text.length < 6) {
-                  setState(
-                    () {
-                      error = 'The password is too short';
-                    },
-                  );
-                } else {
-                  setState(
-                    () {
-                      error = null;
-                    },
-                  );
-                }
-              },
-            ),
-          ],
-        ));
+            onChanged: (String value) {
+              text = value;
+            },
+          ),
+          RaisedButton(
+            child: const Text('Login'),
+            onPressed: () {
+              if (text.length < 6) {
+                setState(
+                  () {
+                    error = 'The password is too short';
+                  },
+                );
+              } else {
+                setState(
+                  () {
+                    error = null;
+                  },
+                );
+              }
+            },
+          ),
+        ],
+      ),
+    );
   }
 }
