@@ -1,4 +1,4 @@
-import 'curs3/basic_phrases.dart' as app;
+import 'curs3/tic_tac_toe.dart' as app;
 
 void main() {
   app.main();
