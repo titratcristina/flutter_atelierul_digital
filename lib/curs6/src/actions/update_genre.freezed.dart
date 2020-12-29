@@ -34,9 +34,7 @@ mixin _$UpdateGenre {
 
 /// @nodoc
 abstract class $UpdateGenreCopyWith<$Res> {
-  factory $UpdateGenreCopyWith(
-          UpdateGenre value, $Res Function(UpdateGenre) then) =
-      _$UpdateGenreCopyWithImpl<$Res>;
+  factory $UpdateGenreCopyWith(UpdateGenre value, $Res Function(UpdateGenre) then) = _$UpdateGenreCopyWithImpl<$Res>;
   $Res call({String genre});
 }
 
@@ -59,20 +57,16 @@ class _$UpdateGenreCopyWithImpl<$Res> implements $UpdateGenreCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UpdateGenreCopyWith<$Res>
-    implements $UpdateGenreCopyWith<$Res> {
-  factory _$UpdateGenreCopyWith(
-          _UpdateGenre value, $Res Function(_UpdateGenre) then) =
+abstract class _$UpdateGenreCopyWith<$Res> implements $UpdateGenreCopyWith<$Res> {
+  factory _$UpdateGenreCopyWith(_UpdateGenre value, $Res Function(_UpdateGenre) then) =
       __$UpdateGenreCopyWithImpl<$Res>;
   @override
   $Res call({String genre});
 }
 
 /// @nodoc
-class __$UpdateGenreCopyWithImpl<$Res> extends _$UpdateGenreCopyWithImpl<$Res>
-    implements _$UpdateGenreCopyWith<$Res> {
-  __$UpdateGenreCopyWithImpl(
-      _UpdateGenre _value, $Res Function(_UpdateGenre) _then)
+class __$UpdateGenreCopyWithImpl<$Res> extends _$UpdateGenreCopyWithImpl<$Res> implements _$UpdateGenreCopyWith<$Res> {
+  __$UpdateGenreCopyWithImpl(_UpdateGenre _value, $Res Function(_UpdateGenre) _then)
       : super(_value, (v) => _then(v as _UpdateGenre));
 
   @override
@@ -104,17 +98,14 @@ class _$_UpdateGenre implements _UpdateGenre {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _UpdateGenre &&
-            (identical(other.genre, genre) ||
-                const DeepCollectionEquality().equals(other.genre, genre)));
+            (identical(other.genre, genre) || const DeepCollectionEquality().equals(other.genre, genre)));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(genre);
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(genre);
 
   @override
-  _$UpdateGenreCopyWith<_UpdateGenre> get copyWith =>
-      __$UpdateGenreCopyWithImpl<_UpdateGenre>(this, _$identity);
+  _$UpdateGenreCopyWith<_UpdateGenre> get copyWith => __$UpdateGenreCopyWithImpl<_UpdateGenre>(this, _$identity);
 }
 
 abstract class _UpdateGenre implements UpdateGenre {
