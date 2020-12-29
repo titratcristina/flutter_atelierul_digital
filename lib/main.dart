@@ -1,4 +1,4 @@
-import 'curs3/tic_tac_toe.dart' as app;
+import 'curs4/03.dart' as app;
 
 void main() {
   app.main();
